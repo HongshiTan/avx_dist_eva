@@ -30,7 +30,7 @@ float ori_L2SqrSIMD16ExtAVX512(const void *pVect1v, const void *pVect2v, const v
     return (res);
 }
 
-float reduce_L2SqrSIMD16ExtAVX512(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
+inline float reduce_L2SqrSIMD16ExtAVX512(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
     float *pVect1 = (float *) pVect1v;
     float *pVect2 = (float *) pVect2v;
     size_t qty = *((size_t *) qty_ptr);
@@ -57,7 +57,7 @@ float reduce_L2SqrSIMD16ExtAVX512(const void *pVect1v, const void *pVect2v, cons
     return (res);
 }
 
-float reduce_ma_L2SqrSIMD16ExtAVX512(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
+inline float reduce_ma_L2SqrSIMD16ExtAVX512(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
     float *pVect1 = (float *) pVect1v;
     float *pVect2 = (float *) pVect2v;
     size_t qty = *((size_t *) qty_ptr);
@@ -86,7 +86,7 @@ float reduce_ma_L2SqrSIMD16ExtAVX512(const void *pVect1v, const void *pVect2v, c
 }
 
 
-float reduce_ma_L2SqrSIMD16ExtAVX512_128(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
+inline float reduce_ma_L2SqrSIMD16ExtAVX512_128(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
     float *pVect1 = (float *) pVect1v;
     float *pVect2 = (float *) pVect2v;
 
@@ -153,7 +153,7 @@ float reduce_ma_L2SqrSIMD16ExtAVX512_128(const void *pVect1v, const void *pVect2
 
 
 
-float reduce_L2SqrSIMD16ExtAVX512_aligned(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
+inline float reduce_L2SqrSIMD16ExtAVX512_aligned(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
     float *pVect1 = (float *) pVect1v;
     float *pVect2 = (float *) pVect2v;
     size_t qty = *((size_t *) qty_ptr);
@@ -180,7 +180,7 @@ float reduce_L2SqrSIMD16ExtAVX512_aligned(const void *pVect1v, const void *pVect
     return (res);
 }
 
-float reduce_ma_L2SqrSIMD16ExtAVX512_aligned(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
+inline float reduce_ma_L2SqrSIMD16ExtAVX512_aligned(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
     float *pVect1 = (float *) pVect1v;
     float *pVect2 = (float *) pVect2v;
     size_t qty = *((size_t *) qty_ptr);
@@ -209,7 +209,7 @@ float reduce_ma_L2SqrSIMD16ExtAVX512_aligned(const void *pVect1v, const void *pV
 }
 
 
-float reduce_ma_L2SqrSIMD16ExtAVX512_128_aligned(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
+inline float reduce_ma_L2SqrSIMD16ExtAVX512_128_aligned(const void *pVect1v, const void *pVect2v, const void *qty_ptr) {
     float *pVect1 = (float *) pVect1v;
     float *pVect2 = (float *) pVect2v;
 

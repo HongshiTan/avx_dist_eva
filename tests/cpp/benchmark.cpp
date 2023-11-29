@@ -57,12 +57,12 @@ inline void prefetch_128x32_l3(const void * p)
 const int dim = 128;               // Dimension of the elements
 const int max_elements = 1000000;   // Maximum number of elements, should be known beforehand
 
-__attribute__((aligned(512))) float aligned_v1[1000000 * 128];
-__attribute__((aligned(512))) float aligned_v2[1000000 * 128];
+__attribute__((aligned(512))) float aligned_v1[max_elements * dim];
+__attribute__((aligned(512))) float aligned_v2[max_elements * dim];
 
 
-__attribute__((aligned(512))) float unaligned_v1[1000000 * 128 + 64];
-__attribute__((aligned(512))) float unaligned_v2[1000000 * 128 + 64];
+__attribute__((aligned(512))) float unaligned_v1[max_elements * dim + 64];
+__attribute__((aligned(512))) float unaligned_v2[max_elements * dim + 64];
 
 
 
